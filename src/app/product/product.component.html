@@ -1,0 +1,27 @@
+<h1>
+  Product Page
+  </h1>
+  {{productName}}
+  <!--this is interpolation syntax to bind data-->
+
+  <div [hidden]="hidden" [innerText]="productName">
+
+  </div>
+
+  <button class="btn btn-primary" (click) = "toggle()">Toggle</button>
+  <!--Event binding, toggle is in product.component.ts -->
+<table>
+  <thead>
+    <tr>
+       <th>ID</th>
+       <th>Name</th>
+       <th>Price</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let product of products">
+       <td>{{product.id}}</td>
+       <td>{{product.name}}</td>
+       <td>{{product.price}}</td> 
+  </tbody>
+</table>
